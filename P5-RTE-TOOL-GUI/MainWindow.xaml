@@ -154,7 +154,7 @@
                 </TransformGroup>
             </Button.RenderTransform>
         </Button>
-        <ComboBox x:Name="personaSlot" HorizontalAlignment="Left" Margin="205,55,0,0" VerticalAlignment="Top" Width="67" RenderTransformOrigin="0.5,0.5">
+        <ComboBox x:Name="personaSlot" HorizontalAlignment="Left" Margin="205,55,0,0" VerticalAlignment="Top" Width="67" RenderTransformOrigin="0.5,0.5" IsEnabled="False">
             <ComboBox.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>

@@ -39,36 +39,36 @@ namespace P5_RTE_TOOL_GUI
 
         private void TMAPIradiobutton_Checked(object sender, RoutedEventArgs e)
         {
-            //if (TMAPIradiobutton. && !CCAPIradiobutton.Checked && !RPCS3radiobutton.Checked)
-            //{
+            if ((TMAPIradiobutton.IsChecked == true) && (CCAPIradiobutton.IsChecked == false) && (RPCS3radiobutton.IsChecked == false))
+            {
                 PS3API.ChangeAPI(SelectAPI.TargetManager);
                 usingPS3Lib = true;
-            //}
+            }
             //setToolStrip("API set to: " + PS3API.GetCurrentAPIName(), Color.Black);
         }
 
         private void CCAPIradiobutton_Checked(object sender, RoutedEventArgs e)
         {
-            //if (CCAPIradioButton.Checked && !TMAPIradioButton.Checked && !RPCS3radioButton.Checked)
-            //{
+            if (CCAPIradiobutton.IsChecked == true && TMAPIradiobutton.IsChecked == false && RPCS3radiobutton.IsChecked == false)
+            {
                 PS3API.ChangeAPI(SelectAPI.ControlConsole);
                 usingPS3Lib = true;
-            //}
+            }
             //setToolStrip("API set to: " + PS3API.GetCurrentAPIName(), Color.Black);
         }
 
         private void RPCS3radiobutton_Checked(object sender, RoutedEventArgs e)
         {
-            //if (RPCS3radioButton.Checked && !CCAPIradioButton.Checked && !TMAPIradioButton.Checked)
-            //{
-                //ConnectAttachbutton = false;
+            if (RPCS3radiobutton.IsChecked == true && CCAPIradiobutton.IsChecked == false && TMAPIradiobutton.IsChecked == false)
+            {
+                ConnectAttachbutton.IsEnabled = false;
                 usingPS3Lib = false;
                 //setToolStrip("API set to: RPCS3", Color.Black);
-            //}
-            //else if (!RPCS3radioButton.Checked)
-            //{
-                //connectAndAttachButton.Enabled = true;
-            //}
+            }
+            else if (RPCS3radiobutton.IsChecked == false)
+            {
+                ConnectAttachbutton.IsEnabled = true;
+            }
         }
 
         private void connectbutton_Click(object sender, RoutedEventArgs e)
@@ -80,12 +80,12 @@ namespace P5_RTE_TOOL_GUI
                 try
                 {
                     RPCS3API = new ProcessMemoryAccessor("rpcs3", 0x100000000);
-                    //personaSlot.Enabled = true;
+                    personaSlot.IsEnabled = true;
                     //setToolStrip("Connected to RPCS3!", Color.Green);
                 }
                 catch (Exception)
                 {
-                    //MessageBox.Show("Please open the RPCS3 game process before connecting!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Please open the RPCS3 game process before connecting!", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
                     //setToolStrip("Could not connect to RPCS3!", Color.Red);
                 }
             }
@@ -94,7 +94,7 @@ namespace P5_RTE_TOOL_GUI
         {
             if (PS3API.ConnectTarget())
             {
-                //attachButton.Enabled = true;
+                attachButton.IsEnabled = true;
                 //setToolStrip("Connected to target!", Color.Green);
                 return true;
             }
@@ -107,7 +107,7 @@ namespace P5_RTE_TOOL_GUI
         {
             if (PS3API.AttachProcess())
             {
-                //personaSlot.Enabled = true;
+                personaSlot.IsEnabled = true;
                 //setToolStrip("Attached to process!", Color.Green);
                 return true;
             }
