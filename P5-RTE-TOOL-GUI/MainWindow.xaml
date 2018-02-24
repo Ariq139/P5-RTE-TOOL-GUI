@@ -29,11 +29,11 @@
         <Label x:Name="skill5" Content="Shining Arrows" HorizontalAlignment="Left" Margin="394,404,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="p5hatty" FontSize="30" FontWeight="Light"/>
         <Label x:Name="skill6" Content="Shining Arrows" HorizontalAlignment="Left" Margin="394,434,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="p5hatty" FontSize="30" FontWeight="Light"/>
         <Label x:Name="skill7" Content="Shining Arrows" HorizontalAlignment="Left" Margin="394,463,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="p5hatty" FontSize="30" FontWeight="Light"/>
-        <Label x:Name="skill8" Content="Shining Arrows" HorizontalAlignment="Left" Margin="394,494,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="p5hatty" FontSize="30" FontWeight="Light"/>
+        <Label x:Name="skill8" Content="Shining Arrows" HorizontalAlignment="Left" Margin="394,493,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="p5hatty" FontSize="30" FontWeight="Light"/>
         <Label x:Name="skill1" Content="Shining Arrows" HorizontalAlignment="Left" Margin="138,404,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="p5hatty" FontSize="30" FontWeight="Light"/>
         <Label x:Name="skill2" Content="Shining Arrows" HorizontalAlignment="Left" Margin="138,434,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="p5hatty" FontSize="30" FontWeight="Light"/>
         <Label x:Name="skill3" Content="Shining Arrows" HorizontalAlignment="Left" Margin="138,463,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="p5hatty" FontSize="30" FontWeight="Light"/>
-        <Label x:Name="skill4" Content="Shining Arrows" HorizontalAlignment="Left" Margin="138,494,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="p5hatty" FontSize="30" FontWeight="Light"/>
+        <Label x:Name="skill4" Content="Shining Arrows" HorizontalAlignment="Left" Margin="138,493,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="p5hatty" FontSize="30" FontWeight="Light"/>
         <Label x:Name="personaname" Content="Sample Text" HorizontalAlignment="Left" Margin="174,97,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="p5hatty" RenderTransformOrigin="0.5,0.5" FontSize="36">
             <Label.RenderTransform>
                 <TransformGroup>
