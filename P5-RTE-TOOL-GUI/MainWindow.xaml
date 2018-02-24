@@ -10,12 +10,12 @@
         <Grid.Background>
             <ImageBrush ImageSource="res\wpf_bg.png"/>
         </Grid.Background>
-        <RadioButton x:Name="TMAPIradiobutton" Content="TMAPI" HorizontalAlignment="Left" Margin="890,664,0,0" VerticalAlignment="Top" FontFamily="p5hatty" FontSize="20"/>
-        <RadioButton x:Name="CCAPIradiobutton" Content="CCAPI" HorizontalAlignment="Left" Margin="960,664,0,0" VerticalAlignment="Top" FontFamily="p5hatty" FontSize="20"/>
-        <RadioButton x:Name="RPCS3radiobutton" Content="RPCS3" HorizontalAlignment="Left" Margin="1031,664,0,0" VerticalAlignment="Top" RenderTransformOrigin="-1.189,0.733" FontFamily="p5hatty" FontSize="20"/>
-        <Button x:Name="connectattachbutton" Content="Conn. + Attc." HorizontalAlignment="Left" Margin="1120,644,0,0" VerticalAlignment="Top" Width="127" FontFamily="p5hatty" FontSize="20" Background="White" BorderThickness="4" Height="35" BorderBrush="Black"/>
-        <Button x:Name="attachbutton" Content="Attach" HorizontalAlignment="Left" Margin="1187,614,0,0" VerticalAlignment="Top" Width="60" FontFamily="p5hatty" FontSize="14" Background="White" BorderBrush="Black" BorderThickness="4" IsEnabled="False"/>
-        <Button x:Name="connectbutton" Content="Connect" HorizontalAlignment="Left" Margin="1120,614,0,0" VerticalAlignment="Top" Width="60" FontFamily="p5hatty" FontSize="14" Background="White" BorderBrush="Black" BorderThickness="4"/>
+        <RadioButton x:Name="TMAPIradiobutton" Content="TMAPI" HorizontalAlignment="Left" Margin="890,664,0,0" VerticalAlignment="Top" FontFamily="p5hatty" FontSize="20" Checked="TMAPIradiobutton_Checked"/>
+        <RadioButton x:Name="CCAPIradiobutton" Content="CCAPI" HorizontalAlignment="Left" Margin="960,664,0,0" VerticalAlignment="Top" FontFamily="p5hatty" FontSize="20" Checked="CCAPIradiobutton_Checked"/>
+        <RadioButton x:Name="RPCS3radiobutton" Content="RPCS3" HorizontalAlignment="Left" Margin="1031,664,0,0" VerticalAlignment="Top" RenderTransformOrigin="-1.189,0.733" FontFamily="p5hatty" FontSize="20" Checked="RPCS3radiobutton_Checked"/>
+        <Button x:Name="ConnectAttachbutton" Content="Conn. + Attc." HorizontalAlignment="Left" Margin="1120,644,0,0" VerticalAlignment="Top" Width="127" FontFamily="p5hatty" FontSize="20" Background="White" BorderThickness="4" Height="35" BorderBrush="Black"/>
+        <Button x:Name="attachButton" Content="Attach" HorizontalAlignment="Left" Margin="1187,614,0,0" VerticalAlignment="Top" Width="60" FontFamily="p5hatty" FontSize="14" Background="White" BorderBrush="Black" BorderThickness="4" IsEnabled="False"/>
+        <Button x:Name="connectButton" Content="Connect" HorizontalAlignment="Left" Margin="1120,614,0,0" VerticalAlignment="Top" Width="60" FontFamily="p5hatty" FontSize="14" Background="White" BorderBrush="Black" BorderThickness="4" Click="connectbutton_Click"/>
         <Label x:Name="label" Content="Persona Slot :" HorizontalAlignment="Left" Margin="48,66,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="p5hatty" FontSize="30" RenderTransformOrigin="0.5,0.5">
             <Label.RenderTransform>
                 <TransformGroup>
@@ -154,7 +154,7 @@
                 </TransformGroup>
             </Button.RenderTransform>
         </Button>
-        <ComboBox x:Name="SlotCombobox" HorizontalAlignment="Left" Margin="205,55,0,0" VerticalAlignment="Top" Width="67" RenderTransformOrigin="0.5,0.5">
+        <ComboBox x:Name="personaSlot" HorizontalAlignment="Left" Margin="205,55,0,0" VerticalAlignment="Top" Width="67" RenderTransformOrigin="0.5,0.5">
             <ComboBox.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
