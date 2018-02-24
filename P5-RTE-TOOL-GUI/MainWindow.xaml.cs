@@ -115,5 +115,23 @@ namespace P5_RTE_TOOL_GUI
                 //setToolStrip("Could not attach to process!", Color.Red);
             return false;
         }
+
+        private void GetInfobutton_Click(object sender, RoutedEventArgs e)
+        {
+            /*
+            personaInput.Text = Offsets.GetPersona((int)personaSlot.Value);
+            levelInput.Value = Offsets.GetLevel((int)personaSlot.Value);
+            stInput.Value = Offsets.GetStat((int)personaSlot.Value, "St");
+            maInput.Value = Offsets.GetStat((int)personaSlot.Value, "Ma");
+            enInput.Value = Offsets.GetStat((int)personaSlot.Value, "En");
+            agInput.Value = Offsets.GetStat((int)personaSlot.Value, "Ag");
+            luInput.Value = Offsets.GetStat((int)personaSlot.Value, "Lu");
+        private void skillGetButton_Click(object sender, EventArgs e)
+        {
+            skillInput.Text = Offsets.GetSkill((int)personaSlot.Value, (int)skillSlot.Value);
+            setToolStrip("Skill " + skillSlot.Value + " bytes retrieved as: " + Offsets.GetSkill((int)personaSlot.Value, (int)skillSlot.Value), Color.Black);
+        }
+             */
+        }
     }
 }
