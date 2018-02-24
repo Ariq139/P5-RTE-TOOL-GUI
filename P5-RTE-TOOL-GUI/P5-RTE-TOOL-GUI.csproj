@@ -34,6 +34,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="PS3Lib">
+      <HintPath>.\PS3Lib.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
@@ -68,6 +71,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Offsets.cs" />
+    <Compile Include="ProcessMemoryAccessor.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>

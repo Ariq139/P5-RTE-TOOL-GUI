@@ -10,7 +10,7 @@ namespace P5_RTM_Tool_v2
 {
     public static class Offsets
     {
-        public static PS3API PS3API = MainWindow.PS3API;
+        public static PS3API PS3API = MainForm.PS3API;
         public static ProcessMemoryAccessor RPCS3API = MainForm.RPCS3API;
         public static bool usingPS3lib = MainForm.usingPS3Lib;
 
