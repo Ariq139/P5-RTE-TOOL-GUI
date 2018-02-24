@@ -51,7 +51,7 @@ namespace P5_RTE_TOOL_GUI
                 MessageBox.Show("Please select an entry from the list!", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
         }
 
-        private void searchButton_Click(object sender, EventArgs e)
+        /*private void searchButton_Click(object sender, EventArgs e)
         {
             string search = searchInput.Text;
             List<object> curCollection = new List<object>();
@@ -74,6 +74,6 @@ namespace P5_RTE_TOOL_GUI
                 skillList.Items.Add(item);
             //Set LastCollection as curCollection
             LastCollection = curCollection;
-        }
+        }*/
     }
 }

@@ -39,7 +39,7 @@ namespace P5_RTE_TOOL_GUI
             LastCollection = TrueCollection;
         }
 
-        private void searchButton_Click(object sender, EventArgs e)
+        /*private void searchButton_Click(object sender, EventArgs e)
         {
             string search = searchInput.Text;
             List<object> curCollection = new List<object>();
@@ -62,7 +62,7 @@ namespace P5_RTE_TOOL_GUI
                 personaList.Items.Add(item);
             //Set LastCollection as curCollection
             LastCollection = curCollection;
-        }
+        }*/
 
         private void confirmButton_Click(object sender, EventArgs e)
         {

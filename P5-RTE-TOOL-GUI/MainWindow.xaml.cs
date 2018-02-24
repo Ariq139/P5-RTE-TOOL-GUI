@@ -1,4 +1,5 @@
-﻿using Persona5HookTest;
+﻿using P5_RTM_Tool_v2;
+using Persona5HookTest;
 using PS3Lib;
 using System;
 using System.Collections.Generic;
@@ -37,41 +38,85 @@ namespace P5_RTE_TOOL_GUI
             InitializeComponent();
         }
 
+        private void personaSlot_Loaded(object sender, RoutedEventArgs e)
+        {
+           
+            List<string> data = new List<string>();
+            data.Add("1");
+            data.Add("2");
+            data.Add("3");
+            data.Add("4");
+            data.Add("5");
+            data.Add("6");
+            data.Add("7");
+            data.Add("8");
+            data.Add("9");
+            data.Add("10");
+            data.Add("11");
+            data.Add("12");
+
+            // ... Get the ComboBox reference.
+            var comboBox = sender as ComboBox;
+
+            // ... Assign the ItemsSource to the List.
+            comboBox.ItemsSource = data;
+
+        }
+
+        private void personaSlot_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            // ... Get the ComboBox.
+            var comboBox = sender as ComboBox;
+
+        }
+
         private void TMAPIradiobutton_Checked(object sender, RoutedEventArgs e)
         {
-            if ((TMAPIradiobutton.IsChecked == true) && (CCAPIradiobutton.IsChecked == false) && (RPCS3radiobutton.IsChecked == false))
+            try
             {
-                PS3API.ChangeAPI(SelectAPI.TargetManager);
-                usingPS3Lib = true;
+                if ((TMAPIradiobutton.IsChecked == true) && (CCAPIradiobutton.IsChecked == false) && (RPCS3radiobutton.IsChecked == false))
+                {
+                    ConnectAttachbutton.IsEnabled = true;
+                    PS3API.ChangeAPI(SelectAPI.TargetManager);
+                    usingPS3Lib = true;
+                }
             }
-            //setToolStrip("API set to: " + PS3API.GetCurrentAPIName(), Color.Black);
+            catch { }
         }
 
         private void CCAPIradiobutton_Checked(object sender, RoutedEventArgs e)
         {
-            if (CCAPIradiobutton.IsChecked == true && TMAPIradiobutton.IsChecked == false && RPCS3radiobutton.IsChecked == false)
+            try
             {
-                PS3API.ChangeAPI(SelectAPI.ControlConsole);
-                usingPS3Lib = true;
+                if (CCAPIradiobutton.IsChecked == true && TMAPIradiobutton.IsChecked == false && RPCS3radiobutton.IsChecked == false)
+                {
+                    PS3API.ChangeAPI(SelectAPI.ControlConsole);
+                    ConnectAttachbutton.IsEnabled = true;
+                    usingPS3Lib = true;
+                }
             }
-            //setToolStrip("API set to: " + PS3API.GetCurrentAPIName(), Color.Black);
+            catch { }
         }
 
         private void RPCS3radiobutton_Checked(object sender, RoutedEventArgs e)
         {
-            if (RPCS3radiobutton.IsChecked == true && CCAPIradiobutton.IsChecked == false && TMAPIradiobutton.IsChecked == false)
+            try
             {
-                ConnectAttachbutton.IsEnabled = false;
-                usingPS3Lib = false;
-                //setToolStrip("API set to: RPCS3", Color.Black);
+                if (RPCS3radiobutton.IsChecked == true && CCAPIradiobutton.IsChecked == false && TMAPIradiobutton.IsChecked == false)
+                {
+
+                    ConnectAttachbutton.IsEnabled = false;
+                    usingPS3Lib = false;
+                }
+                else if (RPCS3radiobutton.IsChecked == false)
+                {
+                    ConnectAttachbutton.IsEnabled = true;
+                }
             }
-            else if (RPCS3radiobutton.IsChecked == false)
-            {
-                ConnectAttachbutton.IsEnabled = true;
-            }
+            catch { }
         }
 
-        private void connectbutton_Click(object sender, RoutedEventArgs e)
+        private void Connectbutton_Click(object sender, RoutedEventArgs e)
         {
             if (usingPS3Lib) //TMAPI or CCAPI
                 targetConnect();
@@ -95,11 +140,11 @@ namespace P5_RTE_TOOL_GUI
             if (PS3API.ConnectTarget())
             {
                 attachButton.IsEnabled = true;
-                //setToolStrip("Connected to target!", Color.Green);
+                MessageBox.Show("Connected to target");
                 return true;
             }
             else
-                //setToolStrip("Could not connect to target!", Color.Red);
+                MessageBox.Show("Could not connect to target");
             return false;
         }
 
@@ -107,31 +152,31 @@ namespace P5_RTE_TOOL_GUI
         {
             if (PS3API.AttachProcess())
             {
-                personaSlot.IsEnabled = true;
-                //setToolStrip("Attached to process!", Color.Green);
+                MessageBox.Show("Attached to process");
                 return true;
             }
             else
-                //setToolStrip("Could not attach to process!", Color.Red);
+                MessageBox.Show("Could not attach to process");
             return false;
         }
 
         private void GetInfobutton_Click(object sender, RoutedEventArgs e)
         {
-            /*
-            personaInput.Text = Offsets.GetPersona((int)personaSlot.Value);
-            levelInput.Value = Offsets.GetLevel((int)personaSlot.Value);
-            stInput.Value = Offsets.GetStat((int)personaSlot.Value, "St");
-            maInput.Value = Offsets.GetStat((int)personaSlot.Value, "Ma");
-            enInput.Value = Offsets.GetStat((int)personaSlot.Value, "En");
-            agInput.Value = Offsets.GetStat((int)personaSlot.Value, "Ag");
-            luInput.Value = Offsets.GetStat((int)personaSlot.Value, "Lu");
-        private void skillGetButton_Click(object sender, EventArgs e)
-        {
-            skillInput.Text = Offsets.GetSkill((int)personaSlot.Value, (int)skillSlot.Value);
-            setToolStrip("Skill " + skillSlot.Value + " bytes retrieved as: " + Offsets.GetSkill((int)personaSlot.Value, (int)skillSlot.Value), Color.Black);
-        }
-             */
+            
+            //personaInput.Text = Offsets.GetPersona((int)personaSlot.Value);
+            //levelInput.Value = Offsets.GetLevel((int)personaSlot.Value);
+            StAmount.Content = Offsets.GetStat((int)personaSlot.SelectedItem, "St");
+            MaAmount.Content = Offsets.GetStat((int)personaSlot.SelectedItem, "Ma");
+            EnAmount.Content = Offsets.GetStat((int)personaSlot.SelectedItem, "En");
+            AgAmount.Content = Offsets.GetStat((int)personaSlot.SelectedItem, "Ag");
+            LuAmount.Content = Offsets.GetStat((int)personaSlot.SelectedItem, "Lu");
+
+        //private void skillGetButton_Click(object sender, EventArgs e)
+        //{
+        //    skillInput.Text = Offsets.GetSkill((int)personaSlot.Value, (int)skillSlot.Value);
+        //    setToolStrip("Skill " + skillSlot.Value + " bytes retrieved as: " + Offsets.GetSkill((int)personaSlot.Value, (int)skillSlot.Value), Color.Black);
+        //}
+             
         }
     }
 }
