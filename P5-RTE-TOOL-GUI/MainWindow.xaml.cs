@@ -38,38 +38,6 @@ namespace P5_RTE_TOOL_GUI
             InitializeComponent();
         }
 
-        private void personaSlot_Loaded(object sender, RoutedEventArgs e)
-        {
-           
-            List<string> data = new List<string>();
-            data.Add("1");
-            data.Add("2");
-            data.Add("3");
-            data.Add("4");
-            data.Add("5");
-            data.Add("6");
-            data.Add("7");
-            data.Add("8");
-            data.Add("9");
-            data.Add("10");
-            data.Add("11");
-            data.Add("12");
-
-            // ... Get the ComboBox reference.
-            var comboBox = sender as ComboBox;
-
-            // ... Assign the ItemsSource to the List.
-            comboBox.ItemsSource = data;
-
-        }
-
-        private void personaSlot_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            // ... Get the ComboBox.
-            var comboBox = sender as ComboBox;
-
-        }
-
         private void TMAPIradiobutton_Checked(object sender, RoutedEventArgs e)
         {
             try
@@ -106,6 +74,7 @@ namespace P5_RTE_TOOL_GUI
                 {
 
                     ConnectAttachbutton.IsEnabled = false;
+                    connectButton.IsEnabled = true;
                     usingPS3Lib = false;
                 }
                 else if (RPCS3radiobutton.IsChecked == false)
@@ -124,7 +93,7 @@ namespace P5_RTE_TOOL_GUI
             {
                 try
                 {
-                    RPCS3API = new ProcessMemoryAccessor("rpcs3", 0x100000000);
+                    RPCS3API = new ProcessMemoryAccessor("farseer", 0x100000000);
                     personaSlot.IsEnabled = true;
                     //setToolStrip("Connected to RPCS3!", Color.Green);
                 }
