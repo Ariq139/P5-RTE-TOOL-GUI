@@ -11,6 +11,8 @@
         <Button x:Name="searchButton" Content="Search" HorizontalAlignment="Left" Margin="10,69,0,0" VerticalAlignment="Top" Width="272" Height="30"/>
         <Label x:Name="label" Content="Search for a Skill" HorizontalAlignment="Left" Margin="7,15,0,0" VerticalAlignment="Top"/>
         <Button x:Name="confirmButton" Content="Select" HorizontalAlignment="Left" Margin="10,385,0,0" VerticalAlignment="Top" Width="272" Height="34"/>
-        <ListBox x:Name="skillList" HorizontalAlignment="Left" Height="276" Margin="10,104,0,0" VerticalAlignment="Top" Width="272"/>
+        <ListBox x:Name="skillList" HorizontalAlignment="Left" Height="276" Margin="10,104,0,0" VerticalAlignment="Top" Width="272">
+            <ListBoxItem Content="1"/>
+        </ListBox>
     </Grid>
 </Window>

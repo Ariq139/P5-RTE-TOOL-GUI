@@ -5,11 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:P5_RTE_TOOL_GUI"
         mc:Ignorable="d"
-        Title="Persona 5 Real Time Editing Tool" Height="720" Width="1280">
+        Title="Persona 5 Real Time Editing Tool" Height="720" Width="1280" ResizeMode="NoResize">
     <Grid>
         <Grid.Background>
             <ImageBrush ImageSource="Resources\wpf_bg.png"/>
         </Grid.Background>
+        
         <RadioButton x:Name="TMAPIradiobutton" Content="TMAPI" HorizontalAlignment="Left" Margin="890,664,0,0" VerticalAlignment="Top" FontFamily="p5hatty" FontSize="20" Checked="TMAPIradiobutton_Checked"/>
         <RadioButton x:Name="CCAPIradiobutton" Content="CCAPI" HorizontalAlignment="Left" Margin="960,664,0,0" VerticalAlignment="Top" FontFamily="p5hatty" FontSize="20" Checked="CCAPIradiobutton_Checked"/>
         <RadioButton x:Name="RPCS3radiobutton" Content="RPCS3" HorizontalAlignment="Left" Margin="1031,664,0,0" VerticalAlignment="Top" RenderTransformOrigin="-1.189,0.733" FontFamily="p5hatty" FontSize="20" Checked="RPCS3radiobutton_Checked"/>
@@ -34,7 +35,7 @@
         <Label x:Name="skill2" Content="Shining Arrows" HorizontalAlignment="Left" Margin="138,434,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="p5hatty" FontSize="30" FontWeight="Light"/>
         <Label x:Name="skill3" Content="Shining Arrows" HorizontalAlignment="Left" Margin="138,463,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="p5hatty" FontSize="30" FontWeight="Light"/>
         <Label x:Name="skill4" Content="Shining Arrows" HorizontalAlignment="Left" Margin="138,493,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="p5hatty" FontSize="30" FontWeight="Light"/>
-        <Label x:Name="personaname" Content="Sample Text" HorizontalAlignment="Left" Margin="174,97,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="p5hatty" RenderTransformOrigin="0.5,0.5" FontSize="36">
+        <Label x:Name="personaName" Content="Sample Text" HorizontalAlignment="Left" Margin="174,97,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="p5hatty" RenderTransformOrigin="0.5,0.5" FontSize="36">
             <Label.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -104,7 +105,7 @@
                 </TransformGroup>
             </Label.RenderTransform>
         </Label>
-        <Button x:Name="setSt" Content="Set Attribute" HorizontalAlignment="Left" Margin="787,444,0,0" VerticalAlignment="Top" Width="75" FontFamily="p5hatty" Background="Black" Foreground="White" BorderBrush="White" RenderTransformOrigin="0.5,0.5">
+        <Button x:Name="setSt" Content="Set Attribute" HorizontalAlignment="Left" Margin="1104,434,0,0" VerticalAlignment="Top" Width="75" FontFamily="p5hatty" Background="Black" Foreground="White" BorderBrush="White" RenderTransformOrigin="0.5,0.5" Click="setSt_Click">
             <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -114,7 +115,7 @@
                 </TransformGroup>
             </Button.RenderTransform>
         </Button>
-        <Button x:Name="setMa" Content="Set Attribute" HorizontalAlignment="Left" Margin="788,479,0,0" VerticalAlignment="Top" Width="75" FontFamily="p5hatty" Background="Black" Foreground="White" BorderBrush="White" RenderTransformOrigin="0.5,0.5">
+        <Button x:Name="setMa" Content="Set Attribute" HorizontalAlignment="Left" Margin="1106,468,0,0" VerticalAlignment="Top" Width="75" FontFamily="p5hatty" Background="Black" Foreground="White" BorderBrush="White" RenderTransformOrigin="0.5,0.5">
             <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -124,7 +125,7 @@
                 </TransformGroup>
             </Button.RenderTransform>
         </Button>
-        <Button x:Name="setEn" Content="Set Attribute" HorizontalAlignment="Left" Margin="790,513,0,0" VerticalAlignment="Top" Width="75" FontFamily="p5hatty" Background="Black" Foreground="White" BorderBrush="White" RenderTransformOrigin="0.5,0.5">
+        <Button x:Name="setEn" Content="Set Attribute" HorizontalAlignment="Left" Margin="1108,502,0,0" VerticalAlignment="Top" Width="75" FontFamily="p5hatty" Background="Black" Foreground="White" BorderBrush="White" RenderTransformOrigin="0.5,0.5">
             <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -134,7 +135,7 @@
                 </TransformGroup>
             </Button.RenderTransform>
         </Button>
-        <Button x:Name="setAg" Content="Set Attribute" HorizontalAlignment="Left" Margin="791,547,0,0" VerticalAlignment="Top" Width="75" FontFamily="p5hatty" Background="Black" Foreground="White" BorderBrush="White" RenderTransformOrigin="0.5,0.5">
+        <Button x:Name="setAg" Content="Set Attribute" HorizontalAlignment="Left" Margin="1110,536,0,0" VerticalAlignment="Top" Width="75" FontFamily="p5hatty" Background="Black" Foreground="White" BorderBrush="White" RenderTransformOrigin="0.5,0.5">
             <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -144,7 +145,7 @@
                 </TransformGroup>
             </Button.RenderTransform>
         </Button>
-        <Button x:Name="setLu" Content="Set Attribute" HorizontalAlignment="Left" Margin="794,579,0,0" VerticalAlignment="Top" Width="75" FontFamily="p5hatty" Background="Black" Foreground="White" BorderBrush="White" RenderTransformOrigin="0.5,0.5">
+        <Button x:Name="setLu" Content="Set Attribute" HorizontalAlignment="Left" Margin="1112,569,0,0" VerticalAlignment="Top" Width="75" FontFamily="p5hatty" Background="Black" Foreground="White" BorderBrush="White" RenderTransformOrigin="0.5,0.5">
             <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -163,8 +164,20 @@
                     <TranslateTransform/>
                 </TransformGroup>
             </ComboBox.RenderTransform>
+            <ComboBoxItem Content="1"/>
+            <ComboBoxItem Content="2"/>
+            <ComboBoxItem Content="3"/>
+            <ComboBoxItem Content="4"/>
+            <ComboBoxItem Content="5"/>
+            <ComboBoxItem Content="6"/>
+            <ComboBoxItem Content="7"/>
+            <ComboBoxItem Content="8"/>
+            <ComboBoxItem Content="9"/>
+            <ComboBoxItem Content="10"/>
+            <ComboBoxItem Content="11"/>
+            <ComboBoxItem Content="12"/>
         </ComboBox>
-        <Button x:Name="GetInfobutton" Content="Get Info" HorizontalAlignment="Left" Margin="286,43,0,0" VerticalAlignment="Top" Width="61" FontFamily="p5hatty" Background="#FFAF000B" Foreground="White" BorderBrush="White" RenderTransformOrigin="0.5,0.5" Height="22" Click="GetInfobutton_Click">
+        <Button x:Name="GetInfobutton" Content="Get Info" HorizontalAlignment="Left" Margin="286,43,0,0" VerticalAlignment="Top" Width="61" FontFamily="p5hatty" Background="#FFAF000B" Foreground="White" BorderBrush="White" RenderTransformOrigin="0.5,0.5" Height="22" Click="GetInfobutton_Click" IsEnabled="False">
             <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -174,5 +187,55 @@
                 </TransformGroup>
             </Button.RenderTransform>
         </Button>
+        <Slider x:Name="stSlider" HorizontalAlignment="Left" Margin="769,440,0,0" VerticalAlignment="Top" Width="309" RenderTransformOrigin="0.5,0.5" Maximum="99" Minimum="1" SmallChange="1">
+            <Slider.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-3"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Slider.RenderTransform>
+        </Slider>
+        <Slider x:Name="maSlider" HorizontalAlignment="Left" Margin="770,473,0,0" VerticalAlignment="Top" Width="309" RenderTransformOrigin="0.5,0.5" Maximum="99" Minimum="1" SmallChange="1">
+            <Slider.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-3"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Slider.RenderTransform>
+        </Slider>
+        <Slider x:Name="enSlider" HorizontalAlignment="Left" Margin="771,507,0,0" VerticalAlignment="Top" Width="309" RenderTransformOrigin="0.5,0.5" Maximum="99" Minimum="1" SmallChange="1">
+            <Slider.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-3"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Slider.RenderTransform>
+        </Slider>
+        <Slider x:Name="agSlider" HorizontalAlignment="Left" Margin="773,539,0,0" VerticalAlignment="Top" Width="309" RenderTransformOrigin="0.5,0.5" Maximum="99" Minimum="1" SmallChange="1">
+            <Slider.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-3"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Slider.RenderTransform>
+        </Slider>
+        <Slider x:Name="luSlider" HorizontalAlignment="Left" Margin="774,571,0,0" VerticalAlignment="Top" Width="309" RenderTransformOrigin="0.5,0.5" Maximum="99" Minimum="1" SmallChange="1">
+            <Slider.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-3"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Slider.RenderTransform>
+        </Slider>
     </Grid>
 </Window>
