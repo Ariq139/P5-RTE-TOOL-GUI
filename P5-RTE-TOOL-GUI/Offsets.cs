@@ -5,14 +5,15 @@ using System.Text;
 using System.Threading.Tasks;
 using PS3Lib;
 using Persona5HookTest;
+using P5_RTE_TOOL_GUI;
 
 namespace P5_RTM_Tool_v2
 {
     public static class Offsets
     {
-        public static PS3API PS3API = MainForm.PS3API;
-        public static ProcessMemoryAccessor RPCS3API = MainForm.RPCS3API;
-        public static bool usingPS3lib = MainForm.usingPS3Lib;
+        public static PS3API PS3API = MainWindow.PS3API;
+        public static ProcessMemoryAccessor RPCS3API = MainWindow.RPCS3API;
+        public static bool usingPS3lib = MainWindow.usingPS3Lib;
 
         /*The "slot" argument should be more than or equal to 1.
          If you look at the "GetPersonaOffset" method, you'll see that it's subtracting 1 from the slot argument

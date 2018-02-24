@@ -8,7 +8,7 @@
         Title="Persona 5 Real Time Editing Tool" Height="720" Width="1280">
     <Grid>
         <Grid.Background>
-            <ImageBrush ImageSource="res\wpf_bg.png"/>
+            <ImageBrush ImageSource="Resources\wpf_bg.png"/>
         </Grid.Background>
         <RadioButton x:Name="TMAPIradiobutton" Content="TMAPI" HorizontalAlignment="Left" Margin="890,664,0,0" VerticalAlignment="Top" FontFamily="p5hatty" FontSize="20" Checked="TMAPIradiobutton_Checked"/>
         <RadioButton x:Name="CCAPIradiobutton" Content="CCAPI" HorizontalAlignment="Left" Margin="960,664,0,0" VerticalAlignment="Top" FontFamily="p5hatty" FontSize="20" Checked="CCAPIradiobutton_Checked"/>
@@ -164,7 +164,7 @@
                 </TransformGroup>
             </ComboBox.RenderTransform>
         </ComboBox>
-        <Button x:Name="GetInfobutton" Content="Get Info" HorizontalAlignment="Left" Margin="286,43,0,0" VerticalAlignment="Top" Width="61" FontFamily="p5hatty" Background="#FFAF000B" Foreground="White" BorderBrush="White" RenderTransformOrigin="0.5,0.5" Height="22">
+        <Button x:Name="GetInfobutton" Content="Get Info" HorizontalAlignment="Left" Margin="286,43,0,0" VerticalAlignment="Top" Width="61" FontFamily="p5hatty" Background="#FFAF000B" Foreground="White" BorderBrush="White" RenderTransformOrigin="0.5,0.5" Height="22" Click="GetInfobutton_Click">
             <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
