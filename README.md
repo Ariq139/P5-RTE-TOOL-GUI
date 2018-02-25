@@ -3,3 +3,5 @@ This is a frontend for [**P5-RTE-Tool**](https://github.com/TheHiddenHour/P5-RTE
 
 # Features
 The frontend imitates Persona 5's Persona details screen, which is the most familiar interface to players.
+
+Thanks to TGE, TheHiddenHour, and Taireru Benaru for the help.
