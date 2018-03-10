@@ -109,7 +109,7 @@ namespace P5_RTE_TOOL_GUI
                 }
                 catch (Exception)
                 {
-                    MessageBox.Show("Please open the RPCS3 game process before connecting!", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                    MessageBox.Show("No process found! Please check your RPCS3 process name.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
                     //setToolStrip("Could not connect to RPCS3!", Color.Red);
                 }
             }
