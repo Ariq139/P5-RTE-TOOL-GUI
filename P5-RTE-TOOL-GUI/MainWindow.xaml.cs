@@ -105,12 +105,10 @@ namespace P5_RTE_TOOL_GUI
                         = SetSt.IsEnabled = SetMa.IsEnabled
                         = SetEn.IsEnabled = SetAg.IsEnabled
                         = SetLu.IsEnabled = true;
-                    //setToolStrip("Connected to RPCS3!", Color.Green);
                 }
                 catch (Exception)
                 {
                     MessageBox.Show("No process found! Please check your RPCS3 process name.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
-                    //setToolStrip("Could not connect to RPCS3!", Color.Red);
                 }
             }
         }

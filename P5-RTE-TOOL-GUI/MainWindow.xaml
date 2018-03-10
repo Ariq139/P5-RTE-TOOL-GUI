@@ -187,7 +187,7 @@
                 </TransformGroup>
             </Slider.RenderTransform>
         </Slider>
-        <TextBox x:Name="StAmount" HorizontalAlignment="Left" Height="34" Margin="718,437,0,0" TextWrapping="Wrap" Text="{Binding ElementName=stSlider, Path=Value, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="44" FontSize="36" RenderTransformOrigin="0.5,0.5" FontFamily="p5hatty" IsEnabled="False">
+        <TextBox x:Name="StAmount" HorizontalAlignment="Left" Height="34" Margin="717,433,0,0" TextWrapping="Wrap" Text="{Binding ElementName=stSlider, Path=Value, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="44" FontSize="36" RenderTransformOrigin="0.5,0.5" FontFamily="p5hatty" IsEnabled="False">
             <TextBox.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -197,7 +197,7 @@
                 </TransformGroup>
             </TextBox.RenderTransform>
         </TextBox>
-        <TextBox x:Name="MaAmount" HorizontalAlignment="Left" Height="34" Margin="720,472,0,0" TextWrapping="Wrap" Text="{Binding ElementName=maSlider, Path=Value, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="44" FontSize="36" RenderTransformOrigin="0.5,0.5" FontFamily="p5hatty" IsEnabled="False">
+        <TextBox x:Name="MaAmount" HorizontalAlignment="Left" Height="34" Margin="719,470,0,0" TextWrapping="Wrap" Text="{Binding ElementName=maSlider, Path=Value, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="44" FontSize="36" RenderTransformOrigin="0.5,0.5" FontFamily="p5hatty" IsEnabled="False">
             <TextBox.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -207,7 +207,7 @@
                 </TransformGroup>
             </TextBox.RenderTransform>
         </TextBox>
-        <TextBox x:Name="EnAmount" HorizontalAlignment="Left" Height="34" Margin="722,508,0,0" TextWrapping="Wrap" Text="{Binding ElementName=enSlider, Path=Value, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="44" FontSize="36" RenderTransformOrigin="0.5,0.5" FontFamily="p5hatty" IsEnabled="False">
+        <TextBox x:Name="EnAmount" HorizontalAlignment="Left" Height="34" Margin="721,506,0,0" TextWrapping="Wrap" Text="{Binding ElementName=enSlider, Path=Value, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="44" FontSize="36" RenderTransformOrigin="0.5,0.5" FontFamily="p5hatty" IsEnabled="False">
             <TextBox.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -217,7 +217,7 @@
                 </TransformGroup>
             </TextBox.RenderTransform>
         </TextBox>
-        <TextBox x:Name="AgAmount" HorizontalAlignment="Left" Height="34" Margin="724,544,0,0" TextWrapping="Wrap" Text="{Binding ElementName=agSlider, Path=Value, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="44" FontSize="36" RenderTransformOrigin="0.5,0.5" FontFamily="p5hatty" IsEnabled="False">
+        <TextBox x:Name="AgAmount" HorizontalAlignment="Left" Height="34" Margin="723,542,0,0" TextWrapping="Wrap" Text="{Binding ElementName=agSlider, Path=Value, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="44" FontSize="36" RenderTransformOrigin="0.5,0.5" FontFamily="p5hatty" IsEnabled="False">
             <TextBox.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -227,7 +227,7 @@
                 </TransformGroup>
             </TextBox.RenderTransform>
         </TextBox>
-        <TextBox x:Name="LuAmount" HorizontalAlignment="Left" Height="34" Margin="726,580,0,0" TextWrapping="Wrap" Text="{Binding ElementName=luSlider, Path=Value, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="44" FontSize="36" RenderTransformOrigin="0.5,0.5" FontFamily="p5hatty" IsEnabled="False">
+        <TextBox x:Name="LuAmount" HorizontalAlignment="Left" Height="34" Margin="725,578,0,0" TextWrapping="Wrap" Text="{Binding ElementName=luSlider, Path=Value, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="44" FontSize="36" RenderTransformOrigin="0.5,0.5" FontFamily="p5hatty" IsEnabled="False">
             <TextBox.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
