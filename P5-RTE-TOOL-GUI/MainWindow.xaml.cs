@@ -76,6 +76,7 @@ namespace P5_RTE_TOOL_GUI
                     ConnectAttachbutton.IsEnabled = false;
                     connectButton.IsEnabled = true;
                     usingPS3Lib = false;
+                    processName.IsEnabled = true;
                 }
                 else if (RPCS3radiobutton.IsChecked == false)
                 {
@@ -93,9 +94,17 @@ namespace P5_RTE_TOOL_GUI
             {
                 try
                 {
-                    RPCS3API = new ProcessMemoryAccessor("farseer", 0x100000000);
+                    RPCS3API = new ProcessMemoryAccessor(processName.Text, 0x100000000);
                     personaSlot.IsEnabled = true;
                     GetInfobutton.IsEnabled = true;
+                    StAmount.IsEnabled = MaAmount.IsEnabled
+                        = EnAmount.IsEnabled = AgAmount.IsEnabled
+                        = LuAmount.IsEnabled = stSlider.IsEnabled
+                        = maSlider.IsEnabled = enSlider.IsEnabled
+                        = agSlider.IsEnabled = luSlider.IsEnabled
+                        = SetSt.IsEnabled = SetMa.IsEnabled
+                        = SetEn.IsEnabled = SetAg.IsEnabled
+                        = SetLu.IsEnabled = true;
                     //setToolStrip("Connected to RPCS3!", Color.Green);
                 }
                 catch (Exception)
@@ -105,6 +114,52 @@ namespace P5_RTE_TOOL_GUI
                 }
             }
         }
+
+        private void SetSt_Click(object sender, RoutedEventArgs e)
+        {
+            var SelectSlot = personaSlot.Items[personaSlot.SelectedIndex] as ComboBoxItem;
+
+            int slotnum = Convert.ToInt32(SelectSlot.Content);
+
+            Offsets.SetStat(slotnum, "St", Int32.Parse(StAmount.Text));
+        }
+
+        private void SetMa_Click(object sender, RoutedEventArgs e)
+        {
+            var SelectSlot = personaSlot.Items[personaSlot.SelectedIndex] as ComboBoxItem;
+
+            int slotnum = Convert.ToInt32(SelectSlot.Content);
+
+            Offsets.SetStat(slotnum, "Ma", Int32.Parse(MaAmount.Text));
+        }
+
+        private void SetEn_Click(object sender, RoutedEventArgs e)
+        {
+            var SelectSlot = personaSlot.Items[personaSlot.SelectedIndex] as ComboBoxItem;
+
+            int slotnum = Convert.ToInt32(SelectSlot.Content);
+
+            Offsets.SetStat(slotnum, "En", Int32.Parse(EnAmount.Text));
+        }
+
+        private void SetAg_Click(object sender, RoutedEventArgs e)
+        {
+            var SelectSlot = personaSlot.Items[personaSlot.SelectedIndex] as ComboBoxItem;
+
+            int slotnum = Convert.ToInt32(SelectSlot.Content);
+
+            Offsets.SetStat(slotnum, "Ag", Int32.Parse(AgAmount.Text));
+        }
+
+        private void SetLu_Click(object sender, RoutedEventArgs e)
+        {
+            var SelectSlot = personaSlot.Items[personaSlot.SelectedIndex] as ComboBoxItem;
+
+            int slotnum = Convert.ToInt32(SelectSlot.Content);
+
+            Offsets.SetStat(slotnum, "Lu", Int32.Parse(LuAmount.Text));
+        }
+
         private bool targetConnect()
         {
             if (PS3API.ConnectTarget())
@@ -140,11 +195,11 @@ namespace P5_RTE_TOOL_GUI
             personaName.Content = Offsets.GetPersona(slotnum);
             lvl.Content = Offsets.GetLevel(slotnum);
 
-            StAmount.Content = stSlider.Value = Offsets.GetStat(slotnum, "St");
-            MaAmount.Content = maSlider.Value = Offsets.GetStat(slotnum, "Ma");
-            EnAmount.Content = enSlider.Value = Offsets.GetStat(slotnum, "En");
-            AgAmount.Content = agSlider.Value = Offsets.GetStat(slotnum, "Ag");
-            LuAmount.Content = luSlider.Value = Offsets.GetStat(slotnum, "Lu");
+            stSlider.Value = Offsets.GetStat(slotnum, "St");
+            maSlider.Value = Offsets.GetStat(slotnum, "Ma");
+            enSlider.Value = Offsets.GetStat(slotnum, "En");
+            agSlider.Value = Offsets.GetStat(slotnum, "Ag");
+            luSlider.Value = Offsets.GetStat(slotnum, "Lu");
 
             skill1.Content = Offsets.GetSkill(slotnum, 1);
             skill2.Content = Offsets.GetSkill(slotnum, 2);
@@ -155,17 +210,8 @@ namespace P5_RTE_TOOL_GUI
             skill7.Content = Offsets.GetSkill(slotnum, 7);
             skill8.Content = Offsets.GetSkill(slotnum, 8);
 
-            //private void skillGetButton_Click(object sender, EventArgs e)
-            //{
-            //    skillInput.Text = Offsets.GetSkill((int)personaSlot.Value, (int)skillSlot.Value);
-            //    setToolStrip("Skill " + skillSlot.Value + " bytes retrieved as: " + Offsets.GetSkill((int)personaSlot.Value, (int)skillSlot.Value), Color.Black);
-            //}
-
         }
 
-        private void setSt_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
+        
     }
 }
